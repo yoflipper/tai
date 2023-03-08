@@ -1,0 +1,64 @@
+/* Fuente y tamaño de letra predeterminados */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Cabecera */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Menú de navegación */
+nav {
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Contenido principal */
+main {
+    padding: 20px;
+}
+/* Estilos específicos para cada bloque */
+body {
+    background-color: #f3dcab; /* Color de fondo */
+    color: #333; /* Color del texto */
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #fc9700; /* Color de los títulos */
+  }
+  
+  a {
+    color: #534931; /* Color de los enlaces */
+  }
+  /* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
