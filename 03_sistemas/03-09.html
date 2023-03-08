@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistemas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="content"></div>
+        <div id="footer"></div>
+    </div>
+    <section id="bloque3">
+        <h2>III Desarrollo de sistemas</h2>
+           <h3>9.Repositorios: estructura y actualización. Generación de código y
+            documentación. Metodologías de desarrollo. Pruebas. Programas para control de
+            versiones. Plataformas de desarrollo colaborativo de software.</h3> 
+          </p>
+          <p>
+            <h4>Repositorios: estructura y actualización.</h4>
+          </p>
+          <p>
+            Un repositorio de software es un lugar de almacenamiento del cual pueden ser recuperados e instalados los paquetes de software en un ordenador.
+          </p>
+        </p>
+        <p>Muchos editores de software y otras organizaciones mantienen servidores en <a href="/wiki/Internet" title="Internet">Internet</a> para este fin, ya sea de forma gratuita o por una tarifa de suscripción. Los repositorios pueden ser únicamente para programas particulares, como <a href="/wiki/CPAN" title="CPAN">CPAN</a> para el lenguaje de programación <a href="/wiki/Perl" title="Perl">Perl</a>, o para un <a href="/wiki/Sistema_operativo" title="Sistema operativo">sistema operativo</a> completo. Los operadores de estos repositorios suelen ofrecer un <a href="/wiki/Sistema_de_gesti%C3%B3n_de_paquetes" title="Sistema de gestión de paquetes">sistema de gestión de paquetes</a>, herramientas destinadas a buscar, instalar y manipular los paquetes de software desde los repositorios. Por ejemplo, muchas <a href="/wiki/Distribuciones_Linux" class="mw-redirect" title="Distribuciones Linux">distribuciones Linux</a> utilizan <a href="/wiki/Advanced_Packaging_Tool" title="Advanced Packaging Tool">Advanced Packaging Tool</a>(APT), encontrado comúnmente en distribuciones basadas en <a href="/wiki/Debian" class="mw-redirect" title="Debian">Debian</a>, o <a href="/wiki/Yum_(software)" title="Yum (software)">yum</a>, encontrado en distribuciones basadas en <a href="/wiki/Red_Hat" title="Red Hat">Red Hat</a>. También hay varios sistemas independientes de gestión de paquetes, como pacman, utilizados en <a href="/wiki/Arch_Linux" title="Arch Linux">Arch Linux</a> y Equo, encontrados en <a href="/wiki/Sabayon_Linux" title="Sabayon Linux">Sabayon Linux</a>.<span class="cx-segment" data-segmentid="37"></span>
+        </p><p>Como los repositorios de software están diseñadas para incluir paquetes de útiles, los repositorios importantes están diseñados para estar libre de <a href="/wiki/Malware" title="Malware">malware</a>. Si un equipo está configurado para utilizar una <a href="/wiki/Firma_digital" title="Firma digital">firma digital</a> de un repositorio de algún vendedor de confianza, combinado con un sistema de permisos adecuado, reduce significativamente la amenaza de malware en estos sistemas. Como efecto secundario, muchos sistemas que tienen estas capacidades no requieren <a href="/wiki/Software_antivirus" class="mw-redirect" title="Software antivirus">software antivirus</a> ni software anti-malware.
+        <span class="cx-segment" data-segmentid="46"></span>
+        </p><p>La mayoría de las principales <a href="/wiki/Distribuciones_de_Linux" class="mw-redirect" title="Distribuciones de Linux">distribuciones de Linux</a> tienen muchos repositorios en todo el mundo que reflejan el repositorio principal.
+        </p>
+    <hr>
+        <p>Un <a href="/wiki/Sistema_de_gesti%C3%B3n_de_paquetes" title="Sistema de gestión de paquetes">sistema de gestión de paquetes</a> es diferente de un proceso de desarrollo paquetes.
+        </p><p>Un uso típico de un sistema de gestión de paquetes es facilitar la integración de código de posibles fuentes diferentes a una unidad operativa coherente e independiente. Por lo tanto, un sistema de gestión de paquetes podría ser utilizado para producir una <a href="/wiki/Distribuci%C3%B3n_de_Linux" class="mw-redirect" title="Distribución de Linux">distribución de Linux</a>, posiblemente, una distribución adaptada a una aplicación restringida específica.<span class="cx-segment" data-segmentid="59"></span>
+        </p><p>Un proceso de desarrollo de paquetes, por el contrario, se utiliza para gestionar el co-desarrollo de código y documentación de una colección de funciones o rutinas con un tema común, produciendo de esta manera un conjunto de funciones de software que normalmente no será completa y utilizable por sí mismos. Un buen proceso de desarrollo de paquetes ayudará a los usuarios, conforme a una buena documentación y prácticas de codificación, con la integración de cierto nivel de <a href="/wiki/Prueba_unitaria" title="Prueba unitaria">pruebas unitarias</a>. La tabla más abajo proporciona ejemplos de procesos de desarrollo de paquetes.<span class="cx-segment" data-segmentid="65"></span>
+        </p>
+    <hr>
+        <p>La siguiente tabla muestra un par de lenguajes con los repositorios de software contribuido. La columna "Autochecks" describe los controles de rutina realizados.<span class="cx-segment" data-segmentid="70"></span>
+        </p><p>Muy pocas personas tienen la posibilidad de probar su software en múltiples sistemas operativos con diferentes versiones del código del núcleo y con otros paquetes contribuido que pueden utilizar. Para <a href="/wiki/R_(lenguaje_de_programaci%C3%B3n)" title="R (lenguaje de programación)">R</a>, la Red Archivo R Integral (CRAN), realiza pruebas de forma rutinaria. Para ver cuán valioso es esto, supongamos que Sally aporta un paquete A. Solo Sally ejecuta la versión actual del software en una versión de Microsoft Windows y solo se ha probado en ese entorno. A intervalos más o menos regulares, CRAN pone a prueba la contribución de Sally en una docena de combinaciones de sistemas operativos y versiones del software núcleo del lenguaje R. Si uno de ellos genera un error, se pone ese mensaje de error. Con suerte, ese mensaje de error puede ser suficiente para que le permita solucionar el error, incluso si ella no puede replicarlo con el hardware y software que tiene. A continuación, supongamos que John contribuye al repositorio un paquete B que utiliza un paquete A. El paquete B pasa todas las pruebas y se pone a disposición de los usuarios. Más tarde, Sally presenta una versión mejorada de A, que por desgracia, rompe B. Los autochecks hacen posible proporcionar información a John para que pueda solucionar el problema.<span class="cx-segment" data-segmentid="81"></span>
+        </p><p>Este ejemplo expone a la vez una fortaleza y una debilidad en el sistema de paquetes contribuidos R: CRAN provee este tipo de pruebas automatizadas de paquetes contribuidos, pero los paquetes contribuido a CRAN no necesitan especificar las versiones de otros paquetes contribuidos que utilizan. Existen procedimientos para solicitar versiones específicas de paquetes, pero los contribuyentes no podrían utilizar esos procedimientos.<span class="cx-segment" data-segmentid="84"></span>
+        </p><p>Más allá de esto, un repositorio como CRAN ejecuta comprobaciones regulares de paquetes contribuidos, en realidad ofrece un extenso conjunto de pruebas para las versiones de desarrollo del núcleo del lenguaje. Si Sally (en el ejemplo anterior) obtiene un mensaje de error que no entiende o cree inapropiado, sobre todo a partir de una versión de desarrollo del lenguaje, ella puede (y a menudo lo hace con R) pedir ayuda al equipo de desarrollo principal para el lenguaje. De esta manera, el repositorio puede contribuir a mejorar la calidad del software núcleo del lenguaje.
+        </p>
+        <table class="wikitable">
+        
+        <tbody><tr>
+        <th>Propósito / de lengua
+        </th>
+        <th>Proceso de gestión de paquetes
+        </th>
+        <th>Repositorio
+        </th>
+        <th>Cómo para instalar
+        </th>
+        <th>Collaborative Plataforma de desarrollo
+        </th>
+        <th>Autochecks
+        </th></tr>
+        <tr>
+        <td><a href="/wiki/C%2B%2B" title="C++">C++</a>
+        </td>
+        <td><a href="/wiki/Bibliotecas_Boost" title="Bibliotecas Boost">Impulso</a>
+        </td></tr>
+        <tr>
+        <td>Haskell
+        </td>
+        <td>Arquitectura común para Construir Aplicacirones y Bibliotecas (CABAL)
+        </td>
+        <td><a href="/wiki/Haskell" title="Haskell">Hackage</a>
+        </td></tr>
+        <tr>
+        <td><a href="/wiki/Plataforma_Java" title="Plataforma Java">Java</a>
+        </td>
+        <td><a href="/wiki/Maven" title="Maven">Maven</a>
+        </td></tr>
+        <tr>
+        <td>.<a href="/wiki/Microsoft_.NET" title="Microsoft .NET">NET</a>
+        </td>
+        <td><a href="https://en.wikipedia.org/wiki/NuGet" class="extiw" title="en:NuGet">NuGet</a>
+        </td>
+        <td>NuGet
+        </td></tr>
+        <tr>
+        <td><a href="/wiki/Node.js" title="Node.js">Node.js</a>
+        </td>
+        <td><a href="https://en.wikipedia.org/wiki/Npm_(software)" class="extiw" title="en:Npm (software)">NPM</a>
+        </td></tr>
+        <tr>
+        <td><a href="/wiki/Perl" title="Perl">Perl</a>
+        </td>
+        <td><a href="/wiki/CPAN" title="CPAN">CPAN</a>
+        </td></tr>
+        <tr>
+        <td><a href="/wiki/PHP" title="PHP">PHP</a>
+        </td>
+        <td><a href="/wiki/PEAR" title="PEAR">PECL</a>
+        </td></tr>
+        <tr>
+        <td><a href="/wiki/Python" title="Python">Python</a>
+        </td>
+        <td>Setuptools
+        </td>
+        <td><a href="/wiki/Python_Package_Index" class="mw-redirect" title="Python Package Index">PyPI</a>
+        </td>
+        <td><a href="/wiki/Pip_(administrador_de_paquetes)" title="Pip (administrador de paquetes)">pip</a>, EasyInstall, PyPM
+        </td></tr>
+        <tr>
+        <td rowspan="2"><a href="/wiki/R_(lenguaje_de_programaci%C3%B3n)" title="R (lenguaje de programación)">R</a>
+        </td>
+        <td>R CMD check process<sup id="cite_ref-1" class="reference separada"><a href="#cite_note-1"><span class="corchete-llamada">[</span>1<span class="corchete-llamada">]</span></a></sup>&#8203;<sup id="cite_ref-2" class="reference separada"><a href="#cite_note-2"><span class="corchete-llamada">[</span>2<span class="corchete-llamada">]</span></a></sup>&#8203;
+        </td>
+        <td><a rel="nofollow" class="external text" href="http://cran.r-project.org/">CRAN</a>
+        </td>
+        <td><a rel="nofollow" class="external text" href="http://cran.r-project.org/doc/manuals/R-admin.html#Installing-packages">install.packages</a>
+        </td>
+        <td><a rel="nofollow" class="external text" href="http://r-forge.r-project.org/">R-Forjar</a>
+        </td>
+        <td>Aproximadamente semanal en 12 plataformas o combinaciones de versión diferente de R (devel, prerel, parcheado, liberación) con hasta 7 sistemas operativos diferentes (diferentes versiones de Linux, Windows y Mac)
+        </td></tr>
+        
+        <tr>
+        <td><a href="/wiki/Bioconductor" title="Bioconductor">Bioconductor</a>
+        </td>
+        <td><a rel="nofollow" class="external text" href="http://www.bioconductor.org/docs/install">BiocLite</a>.<a rel="nofollow" class="external text" href="http://www.bioconductor.org/docs/install">R</a><a rel="nofollow" class="external autonumber" href="http://www.bioconductor.org/docs/install">[1]</a>
+        </td></tr>
+        <tr>
+        <td><a href="/wiki/Ruby" title="Ruby">Ruby</a>
+        </td>
+        <td><a href="/wiki/RubyGems" title="RubyGems">RubyGems</a>
+        </td>
+        <td>Ruby Application Archive
+        </td>
+        <td>RubyForge
+        </td></tr>
+        <tr>
+        <td><a href="/wiki/TeX" title="TeX">TeX</a>, <a href="/wiki/LaTeX" title="LaTeX">LÁTEX</a>
+        </td>
+        <td><a href="/wiki/CTAN" title="CTAN">CTAN</a>
+        </td></tr></tbody></table>
+    <hr>
+        <p>Software para gestionar repositorios (gestores de repositorios) incluyen:
+        </p>
+        <ul><li>Apache Archiva&#160;&#x40;&#x2013;  "software de gestión de repositorio para la construcción del repositorio de artefactos"<sup id="cite_ref-4" class="reference separada"><a href="#cite_note-4"><span class="corchete-llamada">[</span>4<span class="corchete-llamada">]</span></a></sup>&#8203;</li>
+        <li>MyGet&#160;&#x40;&#x2013;  "servicio de entrega continua de alojamiento, 1000 de los repositorios de paquetes NuGet, Bower y NGP"<sup id="cite_ref-5" class="reference separada"><a href="#cite_note-5"><span class="corchete-llamada">[</span>5<span class="corchete-llamada">]</span></a></sup>&#8203;</li>
+        <li>JFrog Artifactory&#160;&#x40;&#x2013;  "gestión de los binarios a lo largo del ciclo desarrollo"<sup id="cite_ref-6" class="reference separada"><a href="#cite_note-6"><span class="corchete-llamada">[</span>6<span class="corchete-llamada">]</span></a></sup>&#8203;</li>
+        <li>Sonatype Nexus&#160;&#x40;&#x2013;  "utilizado por más de 20.000 organizaciones"<sup id="cite_ref-7" class="reference separada"><a href="#cite_note-7"><span class="corchete-llamada">[</span>7<span class="corchete-llamada">]</span></a></sup>&#8203;</li>
+        <li>Paquete Drone&#160;&#x40;&#x2013;  "un repositorio gestor de paquetes de OSGi"<sup id="cite_ref-8" class="reference separada"><a href="#cite_note-8"><span class="corchete-llamada">[</span>8<span class="corchete-llamada">]</span></a></sup>&#8203;</li></ul>
+        
+          <p>
+            <h4>Generación de código y documentación.</h4>
+          </p>
+          <p>
+            <h4>Metodologías de desarrollo.</h4>
+          </p>
+          <p>
+            <h4>Pruebas.</h4>
+          </p>
+          <p>
+            <h4>Programas para control de versiones.</h4>
+          </p>
+          git https://aprendeconalf.es/docencia/git/manual/creacion-actualizacion-repositorios/
+          <p>
+            <h4>Plataformas de desarrollo colaborativo de software.</h4>
+          </p>
+      </section>  
+</body>
+<footer>
+    <p>&#9760 | &#169; TAI 2023 | &#9760; </p>
+  </footer>
+</html>

@@ -2,6 +2,9 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
+    position: relative;
+    padding-bottom: 81px;
+    min-height: 1000px;
 }
 
 /* Cabecera */
