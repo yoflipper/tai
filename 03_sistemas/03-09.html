@@ -156,7 +156,101 @@
           <p>
             <h4>Programas para control de versiones.</h4>
           </p>
-          git https://aprendeconalf.es/docencia/git/manual/creacion-actualizacion-repositorios/
+          git https://aprendeconalf.es/docencia/git/manual/
+          <p>
+            <h5>Configuración de Git</h5>
+<pre>Antes de empezar a usar git es necesario configurarlo con el nombre de usuario y su correo electrónico.
+
+git config
+Establecer el nombre de usuario
+git config --global user.name "Your-Full-Name"
+Establecer el correo del usuario
+git config --global user.email "your-email-address"
+Activar el coloreado de la salida
+git config --global color.ui auto
+Mostrar el estado original en los conflictos
+git config --global merge.conflictstyle diff3
+Mostrar la configuración
+git config --list</pre> 
+<hr>
+        <p>
+            <h5>Creación de un repositorio nuevo</h5>
+<pre>git init
+
+    git init "nombre-repositorio" crea un repositorio nuevo con el nombre "nombre-repositorio".
+    Este comando crea crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada .git 
+    que contiene la base de datos donde se registran los cambios en el repositorio.
+            </pre> </p>
+        <p>
+            <h5>Copia de repositorios</h5>
+<pre>git clone
+git clone "url-repositorio" crea una copia local del repositorio ubicado en la dirección "url-repositorio".
+A partir de que se hace la copia, los dos repositorios, el original y la copia, son independientes, es decir, 
+cualquier cambio en uno de ellos no se verá reflejado en el otro.
+        </pre>
+        <div class="article-style">
+            <h2 id="creación-de-repositorios">Creación de repositorios<a class="anchorjs-link " href="#creación-de-repositorios" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<h3 id="creación-de-un-repositorio-nuevo">Creación de un repositorio nuevo<a class="anchorjs-link " href="#creación-de-un-repositorio-nuevo" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h4 id="git-init"><code>git init</code><a class="anchorjs-link " href="#git-init" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<ul>
+<li><code>git init &lt;nombre-repositorio&gt;</code> crea un repositorio nuevo con el nombre <code>&lt;nombre-repositorio&gt;</code>.</li>
+</ul>
+<p>Este comando crea crea una nueva carpeta con el nombre del repositorio, que a su vez contiene otra carpeta oculta llamada <code>.git</code> que contiene la base de datos donde se registran los cambios en el repositorio.</p>
+<h2 id="copia-de-repositorios">Copia de repositorios<a class="anchorjs-link " href="#copia-de-repositorios" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<h4 id="git-clone"><code>git clone</code><a class="anchorjs-link " href="#git-clone" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<ul>
+<li><code>git clone &lt;url-repositorio&gt;</code> crea una copia local del repositorio ubicado en la dirección <code>&lt;url-repositorio&gt;</code>.</li>
+</ul>
+<p>A partir de que se hace la copia, los dos repositorios, el original y la copia, son independientes, es decir, cualquier cambio en uno de ellos no se verá reflejado en el otro.</p>
+<h2 id="añadir-cambios-a-un-repositorio">Añadir cambios a un repositorio<a class="anchorjs-link " href="#añadir-cambios-a-un-repositorio" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<p>Con Git, cualquier cambio que hagamos en un proyecto tiene que pasar por tres estados hasta que guarde definitivamente en el repositorio.</p>
+<ul>
+<li><strong>Directorio de trabajo</strong> Es el directorio que contiene una copia de una versión concreta del proyecto en la que se está trabajando. Puede contener ficheros que no pertenecen al repositorio.</li>
+<li><strong>Zona temporal de intercambio</strong> (staging area) es una zona donde se guardan los cambios temporalmente desde el directorio de trabajo antes de hacerlos definitivos y registrarlos en el repositorio.</li>
+<li><strong>Repositorio</strong> Es donde finalmente se guardan los cambios confirmados desde la zona temporal de intercambio.</li>
+</ul>
+<h3 id="añadir-cambios-a-la-zona-de-intercambio-temporal">Añadir cambios a la zona de intercambio temporal<a class="anchorjs-link " href="#añadir-cambios-a-la-zona-de-intercambio-temporal" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h4 id="git-add"><code>git add</code><a class="anchorjs-link " href="#git-add" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<ul>
+<li>
+<p><code>git add &lt;fichero&gt;</code> añade los cambios en el fichero <code>&lt;fichero&gt;</code> del directorio de trabajo a la zona de intercambio temporal.</p>
+</li>
+<li>
+<p><code>git add &lt;carpeta&gt;</code> añade los cambios en todos los ficheros de la carpeta <code>&lt;carpeta&gt;</code> del directorio de trabajo a la zona de intercambio temporal.</p>
+</li>
+<li>
+<p><code>git add .</code> añade todos los cambios de todos los ficheros no guardados aún en la zona de intercambio temporal.</p>
+</li>
+</ul>
+<h3 id="añadir-cambios-al-repositorio">Añadir cambios al repositorio<a class="anchorjs-link " href="#añadir-cambios-al-repositorio" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<h4 id="git-commit"><code>git commit</code><a class="anchorjs-link " href="#git-commit" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h4>
+<ul>
+<li>
+<p><code>git commit -m "mensaje"</code> confirma todos los cambios de la zona de intercambio temporal añadiéndolos al repositorio y creando una nueva versión del proyecto. <code>"mensaje"</code> es un breve mensaje describiendo los cambios realizados que se asociará a la nueva versión del proyecto.</p>
+</li>
+<li>
+<p><code>git commit --amend -m "mensaje"</code> cambia el mensaje del último commit por el nuevo mensaje <code>"mensaje"</code>.</p>
+</li>
+</ul>
+<img src="../img/git-add-commit.png" alt="Añadir commit">
+<h2 id="registro-de-cambios">Registro de cambios<a class="anchorjs-link " href="#registro-de-cambios" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<p>Para guardar los cambios en un repositorio Git utiliza una estructura de tres niveles:</p>
+<ul>
+<li><strong>Commit</strong> Contiene información sobre el autor, el momento y el mensaje de los cambios.</li>
+<li><strong>Árbol (tree)</strong> Cada commit contiene además un árbol donde se registran los nombres y rutas de los ficheros en el repositorio cuando se hizo el commit.</li>
+<li><strong>Blob (binary file object)</strong> Para cada uno de los ficheros listados en el árbol hay un blob, que contiene una instantánea comprimida del contenido del fichero cuando se hizo el commit.<br>
+Si un fichero del repositorio no ha cambiado en el commit, el árbol apunta al blob del fichero del último commit donde el fichero cambió.</li>
+</ul>
+<h2 id="referenciar-un-commit">Referenciar un commit<a class="anchorjs-link " href="#referenciar-un-commit" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+<p>Cada commit tiene asociado un código hash de 40 caracteres hexadecimales que lo identifica de manera única.
+Hay dos formas de referirse a un commit:</p>
+<ul>
+<li><strong>Nombre absoluto</strong>: Se utiliza su código hash (basta indicar los 4 o 5 primeros dígitos).</li>
+<li><strong>Nombre relativo</strong>: Se utiliza la palabra <code>HEAD</code> para referirse siempre al último commit. Para referirse al penúltimo commit se utiliza <code>HEAD~1</code>, al antepenúltimo <code>HEAD~2</code>, etc.</li>
+</ul>
+<img src="../img/modelo-datos-git.png" alt="Modelo de datos de Git">
+
+          </div>
           <p>
             <h4>Plataformas de desarrollo colaborativo de software.</h4>
           </p>
